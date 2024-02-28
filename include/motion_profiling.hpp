@@ -32,7 +32,7 @@ public:
 class CubicBezier : public virtualPath
 {
 public:
-    CubicBezier(const Point2D &p0, const Point2D &p1, const Point2D &p2, const Point2D &p3, int length = 10000);
+    CubicBezier(const Point2D &p0, const Point2D &p1, const Point2D &p2, const Point2D &p3, int length = 0);
     ~CubicBezier()
     {
         this->lengths.clear();

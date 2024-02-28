@@ -23,7 +23,7 @@ void Ramsete::follow(virtualPath &targetPath, double max) {
     this->profile = this->generator->getProfile();
     for (int i = 0; i < profile.size(); i++) {
         auto [v, w] = update(i);
-        double angEffect = (w * DRIVE_CHASSIS_WIDTH / 2.0);
+        double angEffect = w * 0.5 * DRIVE_CHASSIS_WIDTH;
         double left = v + angEffect;
         double right = v - angEffect;
         double v_max = std::max(fabs(left), fabs(right));
